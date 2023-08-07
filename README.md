@@ -19,7 +19,7 @@ This script can be run inside the root of the package you are trying to build. I
 
 Install Package 
 ---
-This script will build install and cleanup your package. One of the later operations in the package will require sudo usage so either run the script itself as sudo or be ready to input a sudo password. 
+This script will build install and cleanup your package. One of the later lines in the script will require a sudo password.
 
 ```
 sudo ./install_package.sh
