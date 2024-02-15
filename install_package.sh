@@ -1,10 +1,10 @@
 #!/bin/bash 
 
-rosdep update
+rosdep update --include-eol-distros
 
-bloom-generate rosdebian --os-name ubuntu --os-version focal --ros-distro noetic
+bloom-generate rosdebian
 fakeroot debian/rules binary
 sudo dpkg -i ../*.deb 
-rm ../*.deb
+rm ../*deb
 rm -r debian
 rm -r .obj* 
