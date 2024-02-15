@@ -1,4 +1,6 @@
 #!/bin/bash 
 
-bloom-generate rosdebian --os-name ubuntu --os-version focal --ros-distro noetic
+rosdep update --include-eol-distros
+
+bloom-generate rosdebian
 fakeroot debian/rules binary
